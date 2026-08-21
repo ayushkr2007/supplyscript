@@ -8,11 +8,13 @@ pattern -- grounded in actual dataset columns, not invented numbers.
 Options per order:
   A) Upgrade shipping   -- cost = 8% of product price, removes delay
                             risk entirely for that order
-  B) Compensation offer -- cost = 15% discount on the order (cheaper
-                            than upgrading), reduces expected loss by
-                            60% (order still may arrive late, but the
-                            customer relationship/profit loss is
-                            partially offset by the discount)
+  B) Compensation offer -- cost = flat $3.00 voucher (NOT price-scaled,
+                            unlike upgrade), reduces expected loss by
+                            60%. Decoupling the cost from price means
+                            this becomes the more efficient choice for
+                            higher-priced orders (where 8% upgrade cost
+                            exceeds the flat $3 voucher), while upgrade
+                            stays preferred for lower-priced orders.
   C) Do nothing         -- cost = 0, full expected loss remains
 
 Decision variable per order i, per option k: x_{i,k} in {0,1}
@@ -31,7 +33,10 @@ MODEL_PATH = "models/xgb_tuned.pkl"
 
 BUDGET = 800.0
 UPGRADE_COST_RATE = 0.08     # Option A: 8% of product price
-DISCOUNT_COST_RATE = 0.15    # Option B: 15% discount
+DISCOUNT_FLAT_COST = 3.00    # Option B: flat compensation voucher (not
+                              # price-scaled -- decouples it from upgrade
+                              # cost so it can be selected on its own
+                              # merits for higher-price orders)
 DISCOUNT_LOSS_REDUCTION = 0.60  # Option B mitigates 60% of expected loss
 
 
@@ -67,7 +72,7 @@ def score_batch(model, batch: pd.DataFrame) -> pd.DataFrame:
 def build_options(batch: pd.DataFrame) -> pd.DataFrame:
     df = batch.copy()
     df["upgrade_cost"] = df["Order Item Product Price"].clip(lower=0) * UPGRADE_COST_RATE
-    df["discount_cost"] = df["Order Item Product Price"].clip(lower=0) * DISCOUNT_COST_RATE
+    df["discount_cost"] = DISCOUNT_FLAT_COST
     df["value_at_risk"] = df["Order Profit Per Order"].abs()
     df["base_expected_loss"] = df["risk_score"] * df["value_at_risk"]
     return df
