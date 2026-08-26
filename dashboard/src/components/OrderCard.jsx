@@ -4,7 +4,7 @@
   nothing: { label: 'Hold', tone: 'nothing' },
 }
 
-export default function OrderCard({ order, executionStatus, onExecute }) {
+export default function OrderCard({ order, executionStatus, executionError, onExecute }) {
   const riskPct = Math.round(order.risk_score * 100)
   const status = executionStatus || 'idle'
 
@@ -50,6 +50,10 @@ export default function OrderCard({ order, executionStatus, onExecute }) {
         {status === 'done' && 'Executed'}
         {status === 'error' && 'Failed - retry'}
       </button>
+
+      {status === 'error' && executionError && (
+        <p className="execute-error">{executionError}</p>
+      )}
     </article>
   )
 }

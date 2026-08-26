@@ -1,6 +1,8 @@
-﻿import { useEffect, useState, useMemo } from 'react'
+﻿import { useEffect, useState, useMemo, useCallback } from 'react'
 import SummaryBar from './components/SummaryBar.jsx'
 import OrderCard from './components/OrderCard.jsx'
+import ExecutedPanel from './components/ExecutedPanel.jsx'
+import { fetchDecisions, postDecision } from './api.js'
 import './App.css'
 
 const DECISION_LABELS = {
@@ -9,13 +11,14 @@ const DECISION_LABELS = {
   nothing: 'No action',
 }
 
-const API_BASE = 'http://localhost:8000'
-
 export default function App() {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
   const [filter, setFilter] = useState('all')
   const [executionStatus, setExecutionStatus] = useState({})
+  const [executionError, setExecutionError] = useState({})
+  const [executedDecisions, setExecutedDecisions] = useState([])
+  const [apiOnline, setApiOnline] = useState(true)
 
   useEffect(() => {
     fetch('/prescriptions.json')
@@ -27,6 +30,19 @@ export default function App() {
       .catch((err) => setError(err.message))
   }, [])
 
+  const refreshDecisions = useCallback(() => {
+    fetchDecisions()
+      .then((decisions) => {
+        setExecutedDecisions(decisions)
+        setApiOnline(true)
+      })
+      .catch(() => setApiOnline(false))
+  }, [])
+
+  useEffect(() => {
+    refreshDecisions()
+  }, [refreshDecisions])
+
   const orders = useMemo(() => {
     if (!data) return []
     const sorted = [...data.orders].sort((a, b) => b.risk_score - a.risk_score)
@@ -36,6 +52,7 @@ export default function App() {
 
   async function handleExecute(order) {
     setExecutionStatus((prev) => ({ ...prev, [order.order_id]: 'loading' }))
+    setExecutionError((prev) => ({ ...prev, [order.order_id]: null }))
 
     const payload = {
       order_id: order.order_id,
@@ -47,16 +64,17 @@ export default function App() {
     }
 
     try {
-      const res = await fetch(`${API_BASE}/decisions`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
-      if (!res.ok) throw new Error(`API returned ${res.status}`)
+      await postDecision(payload)
       setExecutionStatus((prev) => ({ ...prev, [order.order_id]: 'done' }))
+      refreshDecisions()
     } catch (err) {
-      console.error('Failed to execute decision:', err)
+      const isNetworkError = err instanceof TypeError
+      const message = isNetworkError
+        ? 'Backend unreachable - is it running on port 8000?'
+        : err.message
       setExecutionStatus((prev) => ({ ...prev, [order.order_id]: 'error' }))
+      setExecutionError((prev) => ({ ...prev, [order.order_id]: message }))
+      setApiOnline(!isNetworkError)
     }
   }
 
@@ -97,6 +115,8 @@ export default function App() {
 
       <SummaryBar summary={data.summary} />
 
+      <ExecutedPanel decisions={executedDecisions} apiOnline={apiOnline} />
+
       <nav className="filter-row" aria-label="Filter by decision">
         <FilterPill label="All orders" active={filter === 'all'} onClick={() => setFilter('all')} count={data.summary.batch_size} />
         {Object.entries(data.summary.decision_counts).map(([key, count]) => (
@@ -117,6 +137,7 @@ export default function App() {
             key={order.order_id}
             order={order}
             executionStatus={executionStatus[order.order_id]}
+            executionError={executionError[order.order_id]}
             onExecute={handleExecute}
           />
         ))}
