@@ -1,0 +1,11 @@
+﻿data/*.csv
+*.pkl
+__pycache__/
+*.pyc
+.env
+venv/
+.ipynb_checkpoints/
+
+dashboard/public/prescriptions.json
+dashboard/public/week3_day2_full_batch_eval.json
+*.db

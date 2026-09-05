@@ -2,6 +2,7 @@
 import SummaryBar from './components/SummaryBar.jsx'
 import OrderCard from './components/OrderCard.jsx'
 import ExecutedPanel from './components/ExecutedPanel.jsx'
+import RoiPanel from './components/RoiPanel.jsx'
 import { fetchDecisions, postDecision } from './api.js'
 import './App.css'
 
@@ -116,6 +117,8 @@ export default function App() {
       <SummaryBar summary={data.summary} />
 
       <ExecutedPanel decisions={executedDecisions} apiOnline={apiOnline} />
+
+      {apiOnline && <RoiPanel decisions={executedDecisions} />}
 
       <nav className="filter-row" aria-label="Filter by decision">
         <FilterPill label="All orders" active={filter === 'all'} onClick={() => setFilter('all')} count={data.summary.batch_size} />

@@ -128,9 +128,30 @@ running spent total), offline detection (dashboard detects when the
 backend is unreachable and shows a clear recovery message instead of
 failing silently), and per-order error messages when execution fails.
 
-### Week 3 - The Closed Loop (upcoming)
-- Compare predicted cost/outcome vs. actual for executed decisions
-  (using the `actual_outcome` / `actual_cost` fields already present
-  in the decisions table)
-- Build a "Decision ROI" feedback view tracking how often prescribed
-  actions actually paid off
+### Week 3 - The Closed Loop
+
+**Day 1 - Predicted vs. Actual Evaluation**
+Compared each executed decision's driving risk prediction against the
+real historical outcome (`src/w3_day1_evaluate.py`), using the
+`actual_outcome` / `actual_cost` fields in the decisions table.
+Honesty note carried through: this checks prediction correctness
+against ground truth, not causal intervention effectiveness - we
+can't re-run history with a different shipping mode.
+
+**Day 2 - Full-Batch Precision/Recall/Wasted-Spend Analysis**
+Evaluated the optimizer's full 200-order batch (not just the small
+number manually executed via the dashboard) against ground truth
+(`src/w3_day2_full_batch_eval.py`): **74.2% precision** (of $ spent,
+% truly late), **89.4% recall** (of truly-late orders, % covered),
+**$164.40 wasted spend** (20.6% of total, on orders that were never
+actually late), **$112.55 missed value** (at risk among truly-late
+orders left untouched).
+
+**Day 3 - Decision ROI Dashboard View**
+Built the "Decision ROI" feedback view (`RoiPanel` component)
+combining both prior evaluations: the at-scale Day 2 batch stats
+(precision/recall/wasted spend/missed value across all 200 orders)
+alongside a live breakdown of decisions actually executed through
+the dashboard and checked against real outcomes via Day 1's
+`actual_outcome` data, with a per-decision-type paid-off rate and
+running wasted-spend total.
