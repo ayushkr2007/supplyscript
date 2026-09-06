@@ -1,0 +1,78 @@
+{
+  "n_orders": 200,
+  "brier_score": 0.1543,
+  "expected_calibration_error": 0.096,
+  "verdict": "mildly miscalibrated -- usable, but expected-loss figures carry some error",
+  "bins": [
+    {
+      "range": "0.13-0.22",
+      "n": 12,
+      "mean_predicted": 0.182,
+      "actual_rate": 0.083,
+      "gap": -0.099
+    },
+    {
+      "range": "0.22-0.30",
+      "n": 18,
+      "mean_predicted": 0.269,
+      "actual_rate": 0.222,
+      "gap": -0.047
+    },
+    {
+      "range": "0.30-0.39",
+      "n": 22,
+      "mean_predicted": 0.336,
+      "actual_rate": 0.318,
+      "gap": -0.018
+    },
+    {
+      "range": "0.39-0.48",
+      "n": 28,
+      "mean_predicted": 0.437,
+      "actual_rate": 0.679,
+      "gap": 0.242
+    },
+    {
+      "range": "0.48-0.56",
+      "n": 26,
+      "mean_predicted": 0.521,
+      "actual_rate": 0.654,
+      "gap": 0.133
+    },
+    {
+      "range": "0.56-0.65",
+      "n": 16,
+      "mean_predicted": 0.617,
+      "actual_rate": 0.688,
+      "gap": 0.07
+    },
+    {
+      "range": "0.65-0.74",
+      "n": 14,
+      "mean_predicted": 0.699,
+      "actual_rate": 0.786,
+      "gap": 0.087
+    },
+    {
+      "range": "0.74-0.83",
+      "n": 12,
+      "mean_predicted": 0.791,
+      "actual_rate": 0.917,
+      "gap": 0.126
+    },
+    {
+      "range": "0.83-0.91",
+      "n": 16,
+      "mean_predicted": 0.87,
+      "actual_rate": 1.0,
+      "gap": 0.13
+    },
+    {
+      "range": "0.91-1.00",
+      "n": 36,
+      "mean_predicted": 0.989,
+      "actual_rate": 0.972,
+      "gap": -0.017
+    }
+  ]
+}
