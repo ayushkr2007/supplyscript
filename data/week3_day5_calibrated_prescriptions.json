@@ -1,0 +1,4617 @@
+{
+  "summary": {
+    "batch_size": 200,
+    "budget": 800.0,
+    "total_cost": 799.96,
+    "expected_loss_before": 7597.81,
+    "expected_loss_after": 1244.58,
+    "loss_reduction_pct": 83.6,
+    "decision_counts": {
+      "upgrade": 92,
+      "discount": 60,
+      "nothing": 48
+    }
+  },
+  "orders": [
+    {
+      "order_id": 0,
+      "risk_score": 0.7023,
+      "value_at_risk": 24.75,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 17.38,
+      "expected_loss_after": 6.95,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.95
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 17.38
+        }
+      }
+    },
+    {
+      "order_id": 1,
+      "risk_score": 0.0875,
+      "value_at_risk": 14.52,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.27,
+      "expected_loss_after": 1.27,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.51
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.27
+        }
+      }
+    },
+    {
+      "order_id": 2,
+      "risk_score": 0.0781,
+      "value_at_risk": 20.53,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.6,
+      "expected_loss_after": 1.6,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.64
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.6
+        }
+      }
+    },
+    {
+      "order_id": 3,
+      "risk_score": 0.7171,
+      "value_at_risk": 165.42,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 118.63,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 47.45
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 118.63
+        }
+      }
+    },
+    {
+      "order_id": 4,
+      "risk_score": 0.2336,
+      "value_at_risk": 140.99,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 32.94,
+      "expected_loss_after": 13.18,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 13.18
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 32.94
+        }
+      }
+    },
+    {
+      "order_id": 5,
+      "risk_score": 0.6825,
+      "value_at_risk": 3.19,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 2.18,
+      "expected_loss_after": 2.18,
+      "options": {
+        "upgrade": {
+          "cost": 0.92,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.87
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 2.18
+        }
+      }
+    },
+    {
+      "order_id": 6,
+      "risk_score": 0.1268,
+      "value_at_risk": 10.28,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.3,
+      "expected_loss_after": 1.3,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.52
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.3
+        }
+      }
+    },
+    {
+      "order_id": 7,
+      "risk_score": 0.6556,
+      "value_at_risk": 0.0,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 0.0,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.0
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 0.0
+        }
+      }
+    },
+    {
+      "order_id": 8,
+      "risk_score": 1.0,
+      "value_at_risk": 145.59,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 145.59,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 58.24
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 145.59
+        }
+      }
+    },
+    {
+      "order_id": 9,
+      "risk_score": 0.4275,
+      "value_at_risk": 15.44,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 6.6,
+      "expected_loss_after": 6.6,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.64
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 6.6
+        }
+      }
+    },
+    {
+      "order_id": 10,
+      "risk_score": 0.6556,
+      "value_at_risk": 13.49,
+      "decision": "upgrade",
+      "cost": 2.0,
+      "expected_loss_before": 8.84,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 2.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.54
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 8.84
+        }
+      }
+    },
+    {
+      "order_id": 11,
+      "risk_score": 1.0,
+      "value_at_risk": 90.34,
+      "decision": "upgrade",
+      "cost": 17.27,
+      "expected_loss_before": 90.34,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 17.27,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 36.14
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 90.34
+        }
+      }
+    },
+    {
+      "order_id": 12,
+      "risk_score": 0.8627,
+      "value_at_risk": 54.4,
+      "decision": "upgrade",
+      "cost": 10.4,
+      "expected_loss_before": 46.93,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 18.77
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 46.93
+        }
+      }
+    },
+    {
+      "order_id": 13,
+      "risk_score": 1.0,
+      "value_at_risk": 27.22,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 27.22,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 10.89
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 27.22
+        }
+      }
+    },
+    {
+      "order_id": 14,
+      "risk_score": 0.4607,
+      "value_at_risk": 81.79,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 37.68,
+      "expected_loss_after": 15.07,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 15.07
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 37.68
+        }
+      }
+    },
+    {
+      "order_id": 15,
+      "risk_score": 0.1859,
+      "value_at_risk": 45.53,
+      "decision": "upgrade",
+      "cost": 3.2,
+      "expected_loss_before": 8.47,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.39
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 8.47
+        }
+      }
+    },
+    {
+      "order_id": 16,
+      "risk_score": 0.4275,
+      "value_at_risk": 31.48,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 13.46,
+      "expected_loss_after": 5.38,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 5.38
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 13.46
+        }
+      }
+    },
+    {
+      "order_id": 17,
+      "risk_score": 0.9416,
+      "value_at_risk": 95.81,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 90.21,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 36.09
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 90.21
+        }
+      }
+    },
+    {
+      "order_id": 18,
+      "risk_score": 1.0,
+      "value_at_risk": 59.61,
+      "decision": "upgrade",
+      "cost": 3.6,
+      "expected_loss_before": 59.61,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.6,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 23.84
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 59.61
+        }
+      }
+    },
+    {
+      "order_id": 19,
+      "risk_score": 0.5475,
+      "value_at_risk": 46.33,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 25.36,
+      "expected_loss_after": 10.15,
+      "options": {
+        "upgrade": {
+          "cost": 42.61,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 10.15
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 25.36
+        }
+      }
+    },
+    {
+      "order_id": 20,
+      "risk_score": 0.1267,
+      "value_at_risk": 41.1,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 5.21,
+      "expected_loss_after": 5.21,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.08
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 5.21
+        }
+      }
+    },
+    {
+      "order_id": 21,
+      "risk_score": 0.5475,
+      "value_at_risk": 48.72,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 26.67,
+      "expected_loss_after": 10.67,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 10.67
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 26.67
+        }
+      }
+    },
+    {
+      "order_id": 22,
+      "risk_score": 0.1859,
+      "value_at_risk": 5.4,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.0,
+      "expected_loss_after": 1.0,
+      "options": {
+        "upgrade": {
+          "cost": 1.6,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.4
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.0
+        }
+      }
+    },
+    {
+      "order_id": 23,
+      "risk_score": 0.7687,
+      "value_at_risk": 27.83,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 21.39,
+      "expected_loss_after": 8.56,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 8.56
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 21.39
+        }
+      }
+    },
+    {
+      "order_id": 24,
+      "risk_score": 0.2336,
+      "value_at_risk": 437.15,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 102.14,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 40.86
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 102.14
+        }
+      }
+    },
+    {
+      "order_id": 25,
+      "risk_score": 0.9597,
+      "value_at_risk": 199.98,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 191.92,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 76.77
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 191.92
+        }
+      }
+    },
+    {
+      "order_id": 26,
+      "risk_score": 0.6825,
+      "value_at_risk": 60.58,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 41.34,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 16.54
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 41.34
+        }
+      }
+    },
+    {
+      "order_id": 27,
+      "risk_score": 0.7171,
+      "value_at_risk": 82.89,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 59.44,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 23.78
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 59.44
+        }
+      }
+    },
+    {
+      "order_id": 28,
+      "risk_score": 1.0,
+      "value_at_risk": 5.62,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 5.62,
+      "expected_loss_after": 5.62,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.25
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 5.62
+        }
+      }
+    },
+    {
+      "order_id": 29,
+      "risk_score": 0.1859,
+      "value_at_risk": 12.01,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 2.23,
+      "expected_loss_after": 2.23,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.89
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 2.23
+        }
+      }
+    },
+    {
+      "order_id": 30,
+      "risk_score": 0.1859,
+      "value_at_risk": 94.05,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 17.49,
+      "expected_loss_after": 6.99,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.99
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 17.49
+        }
+      }
+    },
+    {
+      "order_id": 31,
+      "risk_score": 0.6556,
+      "value_at_risk": 319.98,
+      "decision": "upgrade",
+      "cost": 32.0,
+      "expected_loss_before": 209.77,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 83.91
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 209.77
+        }
+      }
+    },
+    {
+      "order_id": 32,
+      "risk_score": 0.4275,
+      "value_at_risk": 123.47,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 52.78,
+      "expected_loss_after": 21.11,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 21.11
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 52.78
+        }
+      }
+    },
+    {
+      "order_id": 33,
+      "risk_score": 0.5987,
+      "value_at_risk": 5.65,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 3.38,
+      "expected_loss_after": 3.38,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 1.35
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 3.38
+        }
+      }
+    },
+    {
+      "order_id": 34,
+      "risk_score": 0.0939,
+      "value_at_risk": 82.19,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 7.72,
+      "expected_loss_after": 7.72,
+      "options": {
+        "upgrade": {
+          "cost": 20.23,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.09
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 7.72
+        }
+      }
+    },
+    {
+      "order_id": 35,
+      "risk_score": 0.2336,
+      "value_at_risk": 59.15,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 13.82,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 5.53
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 13.82
+        }
+      }
+    },
+    {
+      "order_id": 36,
+      "risk_score": 0.3658,
+      "value_at_risk": 14.44,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 5.28,
+      "expected_loss_after": 5.28,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.11
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 5.28
+        }
+      }
+    },
+    {
+      "order_id": 37,
+      "risk_score": 0.8673,
+      "value_at_risk": 49.98,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 43.35,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 17.34
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 43.35
+        }
+      }
+    },
+    {
+      "order_id": 38,
+      "risk_score": 1.0,
+      "value_at_risk": 33.73,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 33.73,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 13.49
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 33.73
+        }
+      }
+    },
+    {
+      "order_id": 39,
+      "risk_score": 0.0875,
+      "value_at_risk": 0.0,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 0.0,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.0
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 0.0
+        }
+      }
+    },
+    {
+      "order_id": 40,
+      "risk_score": 0.296,
+      "value_at_risk": 85.28,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 25.24,
+      "expected_loss_after": 10.1,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 10.1
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 25.24
+        }
+      }
+    },
+    {
+      "order_id": 41,
+      "risk_score": 0.1859,
+      "value_at_risk": 67.5,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 12.55,
+      "expected_loss_after": 5.02,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 5.02
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 12.55
+        }
+      }
+    },
+    {
+      "order_id": 42,
+      "risk_score": 1.0,
+      "value_at_risk": 88.19,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 88.19,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 35.28
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 88.19
+        }
+      }
+    },
+    {
+      "order_id": 43,
+      "risk_score": 1.0,
+      "value_at_risk": 109.23,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 109.23,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 43.69
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 109.23
+        }
+      }
+    },
+    {
+      "order_id": 44,
+      "risk_score": 0.7687,
+      "value_at_risk": 58.5,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 44.97,
+      "expected_loss_after": 17.99,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 17.99
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 44.97
+        }
+      }
+    },
+    {
+      "order_id": 45,
+      "risk_score": 1.0,
+      "value_at_risk": 169.19,
+      "decision": "upgrade",
+      "cost": 32.0,
+      "expected_loss_before": 169.19,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 67.68
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 169.19
+        }
+      }
+    },
+    {
+      "order_id": 46,
+      "risk_score": 0.7171,
+      "value_at_risk": 35.16,
+      "decision": "upgrade",
+      "cost": 1.76,
+      "expected_loss_before": 25.21,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 1.76,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 10.09
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 25.21
+        }
+      }
+    },
+    {
+      "order_id": 47,
+      "risk_score": 0.8312,
+      "value_at_risk": 4.15,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 3.45,
+      "expected_loss_after": 3.45,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 1.38
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 3.45
+        }
+      }
+    },
+    {
+      "order_id": 48,
+      "risk_score": 0.0875,
+      "value_at_risk": 70.84,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 6.2,
+      "expected_loss_after": 6.2,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.48
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 6.2
+        }
+      }
+    },
+    {
+      "order_id": 49,
+      "risk_score": 0.5475,
+      "value_at_risk": 9.65,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 5.28,
+      "expected_loss_after": 5.28,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.11
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 5.28
+        }
+      }
+    },
+    {
+      "order_id": 50,
+      "risk_score": 0.5,
+      "value_at_risk": 35.8,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 17.9,
+      "expected_loss_after": 7.16,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.16
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 17.9
+        }
+      }
+    },
+    {
+      "order_id": 51,
+      "risk_score": 1.0,
+      "value_at_risk": 61.77,
+      "decision": "upgrade",
+      "cost": 10.4,
+      "expected_loss_before": 61.77,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 24.71
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 61.77
+        }
+      }
+    },
+    {
+      "order_id": 52,
+      "risk_score": 0.5846,
+      "value_at_risk": 2.5,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.46,
+      "expected_loss_after": 1.46,
+      "options": {
+        "upgrade": {
+          "cost": 0.9,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.58
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.46
+        }
+      }
+    },
+    {
+      "order_id": 53,
+      "risk_score": 1.0,
+      "value_at_risk": 48.38,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 48.38,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 19.35
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 48.38
+        }
+      }
+    },
+    {
+      "order_id": 54,
+      "risk_score": 0.9348,
+      "value_at_risk": 57.6,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 53.84,
+      "expected_loss_after": 21.54,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 21.54
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 53.84
+        }
+      }
+    },
+    {
+      "order_id": 55,
+      "risk_score": 1.0,
+      "value_at_risk": 19.25,
+      "decision": "upgrade",
+      "cost": 2.0,
+      "expected_loss_before": 19.25,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 2.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.7
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 19.25
+        }
+      }
+    },
+    {
+      "order_id": 56,
+      "risk_score": 1.0,
+      "value_at_risk": 61.42,
+      "decision": "upgrade",
+      "cost": 10.4,
+      "expected_loss_before": 61.42,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 24.57
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 61.42
+        }
+      }
+    },
+    {
+      "order_id": 57,
+      "risk_score": 0.7171,
+      "value_at_risk": 69.07,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 49.53,
+      "expected_loss_after": 19.81,
+      "options": {
+        "upgrade": {
+          "cost": 16.87,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 19.81
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 49.53
+        }
+      }
+    },
+    {
+      "order_id": 58,
+      "risk_score": 0.1267,
+      "value_at_risk": 43.58,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 5.52,
+      "expected_loss_after": 5.52,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.21
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 5.52
+        }
+      }
+    },
+    {
+      "order_id": 59,
+      "risk_score": 0.4607,
+      "value_at_risk": 12.34,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 5.69,
+      "expected_loss_after": 5.69,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.27
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 5.69
+        }
+      }
+    },
+    {
+      "order_id": 60,
+      "risk_score": 0.7171,
+      "value_at_risk": 37.12,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 26.62,
+      "expected_loss_after": 10.65,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 10.65
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 26.62
+        }
+      }
+    },
+    {
+      "order_id": 61,
+      "risk_score": 0.2161,
+      "value_at_risk": 14.4,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 3.11,
+      "expected_loss_after": 3.11,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 1.24
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 3.11
+        }
+      }
+    },
+    {
+      "order_id": 62,
+      "risk_score": 0.7687,
+      "value_at_risk": 23.17,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 17.81,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.12
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 17.81
+        }
+      }
+    },
+    {
+      "order_id": 63,
+      "risk_score": 0.7171,
+      "value_at_risk": 37.35,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 26.78,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 10.71
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 26.78
+        }
+      }
+    },
+    {
+      "order_id": 64,
+      "risk_score": 0.7023,
+      "value_at_risk": 42.53,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 29.87,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 11.95
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 29.87
+        }
+      }
+    },
+    {
+      "order_id": 65,
+      "risk_score": 0.6032,
+      "value_at_risk": 33.74,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 20.35,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 8.14
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 20.35
+        }
+      }
+    },
+    {
+      "order_id": 66,
+      "risk_score": 0.6825,
+      "value_at_risk": 133.91,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 91.39,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 36.55
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 91.39
+        }
+      }
+    },
+    {
+      "order_id": 67,
+      "risk_score": 0.9348,
+      "value_at_risk": 61.99,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 57.95,
+      "expected_loss_after": 23.18,
+      "options": {
+        "upgrade": {
+          "cost": 16.87,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 23.18
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 57.95
+        }
+      }
+    },
+    {
+      "order_id": 68,
+      "risk_score": 0.2336,
+      "value_at_risk": 633.57,
+      "decision": "upgrade",
+      "cost": 32.0,
+      "expected_loss_before": 148.03,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 59.21
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 148.03
+        }
+      }
+    },
+    {
+      "order_id": 69,
+      "risk_score": 0.9597,
+      "value_at_risk": 118.99,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 114.19,
+      "expected_loss_after": 45.68,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 45.68
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 114.19
+        }
+      }
+    },
+    {
+      "order_id": 70,
+      "risk_score": 1.0,
+      "value_at_risk": 40.07,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 40.07,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 16.03
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 40.07
+        }
+      }
+    },
+    {
+      "order_id": 71,
+      "risk_score": 0.6032,
+      "value_at_risk": 57.2,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 34.5,
+      "expected_loss_after": 13.8,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 13.8
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 34.5
+        }
+      }
+    },
+    {
+      "order_id": 72,
+      "risk_score": 1.0,
+      "value_at_risk": 24.91,
+      "decision": "upgrade",
+      "cost": 2.56,
+      "expected_loss_before": 24.91,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 2.56,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 9.96
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 24.91
+        }
+      }
+    },
+    {
+      "order_id": 73,
+      "risk_score": 0.1267,
+      "value_at_risk": 115.2,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 14.6,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 5.84
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 14.6
+        }
+      }
+    },
+    {
+      "order_id": 74,
+      "risk_score": 1.0,
+      "value_at_risk": 53.58,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 53.58,
+      "expected_loss_after": 21.43,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 21.43
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 53.58
+        }
+      }
+    },
+    {
+      "order_id": 75,
+      "risk_score": 0.6825,
+      "value_at_risk": 23.99,
+      "decision": "upgrade",
+      "cost": 3.2,
+      "expected_loss_before": 16.37,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.55
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 16.37
+        }
+      }
+    },
+    {
+      "order_id": 76,
+      "risk_score": 1.0,
+      "value_at_risk": 10.4,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 10.4,
+      "expected_loss_after": 4.16,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 4.16
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 10.4
+        }
+      }
+    },
+    {
+      "order_id": 77,
+      "risk_score": 0.4607,
+      "value_at_risk": 39.06,
+      "decision": "upgrade",
+      "cost": 5.6,
+      "expected_loss_before": 18.0,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 5.6,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.2
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 18.0
+        }
+      }
+    },
+    {
+      "order_id": 78,
+      "risk_score": 0.4275,
+      "value_at_risk": 55.57,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 23.76,
+      "expected_loss_after": 9.5,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 9.5
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 23.76
+        }
+      }
+    },
+    {
+      "order_id": 79,
+      "risk_score": 0.9416,
+      "value_at_risk": 20.16,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 18.98,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.59
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 18.98
+        }
+      }
+    },
+    {
+      "order_id": 80,
+      "risk_score": 0.8961,
+      "value_at_risk": 135.19,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 121.14,
+      "expected_loss_after": 48.46,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 48.46
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 121.14
+        }
+      }
+    },
+    {
+      "order_id": 81,
+      "risk_score": 0.4607,
+      "value_at_risk": 36.27,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 16.71,
+      "expected_loss_after": 6.68,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.68
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 16.71
+        }
+      }
+    },
+    {
+      "order_id": 82,
+      "risk_score": 0.0939,
+      "value_at_risk": 3.75,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 0.35,
+      "expected_loss_after": 0.35,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.14
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 0.35
+        }
+      }
+    },
+    {
+      "order_id": 83,
+      "risk_score": 0.3447,
+      "value_at_risk": 172.79,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 59.56,
+      "expected_loss_after": 23.83,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 23.83
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 59.56
+        }
+      }
+    },
+    {
+      "order_id": 84,
+      "risk_score": 1.0,
+      "value_at_risk": 39.31,
+      "decision": "upgrade",
+      "cost": 2.56,
+      "expected_loss_before": 39.31,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 2.56,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 15.72
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 39.31
+        }
+      }
+    },
+    {
+      "order_id": 85,
+      "risk_score": 0.2336,
+      "value_at_risk": 11.44,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 2.67,
+      "expected_loss_after": 2.67,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 1.07
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 2.67
+        }
+      }
+    },
+    {
+      "order_id": 86,
+      "risk_score": 1.0,
+      "value_at_risk": 20.13,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 20.13,
+      "expected_loss_after": 8.05,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 8.05
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 20.13
+        }
+      }
+    },
+    {
+      "order_id": 87,
+      "risk_score": 0.9416,
+      "value_at_risk": 13.2,
+      "decision": "upgrade",
+      "cost": 3.2,
+      "expected_loss_before": 12.43,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 4.97
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 12.43
+        }
+      }
+    },
+    {
+      "order_id": 88,
+      "risk_score": 1.0,
+      "value_at_risk": 10.28,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 10.28,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 4.11
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 10.28
+        }
+      }
+    },
+    {
+      "order_id": 89,
+      "risk_score": 0.7171,
+      "value_at_risk": 71.97,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 51.61,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 20.64
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 51.61
+        }
+      }
+    },
+    {
+      "order_id": 90,
+      "risk_score": 0.9416,
+      "value_at_risk": 14.01,
+      "decision": "upgrade",
+      "cost": 3.18,
+      "expected_loss_before": 13.19,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.18,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 5.28
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 13.19
+        }
+      }
+    },
+    {
+      "order_id": 91,
+      "risk_score": 0.2553,
+      "value_at_risk": 55.23,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 14.1,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 5.64
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 14.1
+        }
+      }
+    },
+    {
+      "order_id": 92,
+      "risk_score": 0.2161,
+      "value_at_risk": 199.49,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 43.11,
+      "expected_loss_after": 17.24,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 17.24
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 43.11
+        }
+      }
+    },
+    {
+      "order_id": 93,
+      "risk_score": 0.9416,
+      "value_at_risk": 237.99,
+      "decision": "upgrade",
+      "cost": 32.0,
+      "expected_loss_before": 224.09,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 89.64
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 224.09
+        }
+      }
+    },
+    {
+      "order_id": 94,
+      "risk_score": 0.4607,
+      "value_at_risk": 44.8,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 20.64,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 8.26
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 20.64
+        }
+      }
+    },
+    {
+      "order_id": 95,
+      "risk_score": 1.0,
+      "value_at_risk": 203.78,
+      "decision": "upgrade",
+      "cost": 36.16,
+      "expected_loss_before": 203.78,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 36.16,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 81.51
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 203.78
+        }
+      }
+    },
+    {
+      "order_id": 96,
+      "risk_score": 0.7171,
+      "value_at_risk": 41.75,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 29.94,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 11.98
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 29.94
+        }
+      }
+    },
+    {
+      "order_id": 97,
+      "risk_score": 0.8784,
+      "value_at_risk": 33.46,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 29.39,
+      "expected_loss_after": 11.76,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 11.76
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 29.39
+        }
+      }
+    },
+    {
+      "order_id": 98,
+      "risk_score": 0.5987,
+      "value_at_risk": 10.01,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 5.99,
+      "expected_loss_after": 5.99,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.4
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 5.99
+        }
+      }
+    },
+    {
+      "order_id": 99,
+      "risk_score": 0.8673,
+      "value_at_risk": 13.95,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 12.1,
+      "expected_loss_after": 4.84,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 4.84
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 12.1
+        }
+      }
+    },
+    {
+      "order_id": 100,
+      "risk_score": 0.9416,
+      "value_at_risk": 132.29,
+      "decision": "upgrade",
+      "cost": 16.0,
+      "expected_loss_before": 124.56,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 49.83
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 124.56
+        }
+      }
+    },
+    {
+      "order_id": 101,
+      "risk_score": 0.7407,
+      "value_at_risk": 50.44,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 37.36,
+      "expected_loss_after": 14.95,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 14.95
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 37.36
+        }
+      }
+    },
+    {
+      "order_id": 102,
+      "risk_score": 0.4275,
+      "value_at_risk": 108.0,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 46.17,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 18.47
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 46.17
+        }
+      }
+    },
+    {
+      "order_id": 103,
+      "risk_score": 0.8961,
+      "value_at_risk": 83.51,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 74.83,
+      "expected_loss_after": 29.93,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 29.93
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 74.83
+        }
+      }
+    },
+    {
+      "order_id": 104,
+      "risk_score": 1.0,
+      "value_at_risk": 40.95,
+      "decision": "upgrade",
+      "cost": 10.4,
+      "expected_loss_before": 40.95,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 16.38
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 40.95
+        }
+      }
+    },
+    {
+      "order_id": 105,
+      "risk_score": 0.8673,
+      "value_at_risk": 8.57,
+      "decision": "upgrade",
+      "cost": 3.2,
+      "expected_loss_before": 7.43,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.97
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 7.43
+        }
+      }
+    },
+    {
+      "order_id": 106,
+      "risk_score": 0.1267,
+      "value_at_risk": 6.17,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 0.78,
+      "expected_loss_after": 0.78,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.31
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 0.78
+        }
+      }
+    },
+    {
+      "order_id": 107,
+      "risk_score": 0.5987,
+      "value_at_risk": 19.42,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 11.63,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 4.65
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 11.63
+        }
+      }
+    },
+    {
+      "order_id": 108,
+      "risk_score": 0.296,
+      "value_at_risk": 28.07,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 8.31,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.32
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 8.31
+        }
+      }
+    },
+    {
+      "order_id": 109,
+      "risk_score": 0.8627,
+      "value_at_risk": 136.11,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 117.43,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 46.97
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 117.43
+        }
+      }
+    },
+    {
+      "order_id": 110,
+      "risk_score": 0.7687,
+      "value_at_risk": 31.87,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 24.5,
+      "expected_loss_after": 9.8,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 9.8
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 24.5
+        }
+      }
+    },
+    {
+      "order_id": 111,
+      "risk_score": 0.1267,
+      "value_at_risk": 127.39,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 16.14,
+      "expected_loss_after": 6.46,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.46
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 16.14
+        }
+      }
+    },
+    {
+      "order_id": 112,
+      "risk_score": 0.9597,
+      "value_at_risk": 58.49,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 56.13,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 22.45
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 56.13
+        }
+      }
+    },
+    {
+      "order_id": 113,
+      "risk_score": 0.6556,
+      "value_at_risk": 68.63,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 44.99,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 18.0
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 44.99
+        }
+      }
+    },
+    {
+      "order_id": 114,
+      "risk_score": 0.7687,
+      "value_at_risk": 2.3,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.77,
+      "expected_loss_after": 1.77,
+      "options": {
+        "upgrade": {
+          "cost": 3.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.71
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.77
+        }
+      }
+    },
+    {
+      "order_id": 115,
+      "risk_score": 1.0,
+      "value_at_risk": 19.12,
+      "decision": "upgrade",
+      "cost": 2.0,
+      "expected_loss_before": 19.12,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 2.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.65
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 19.12
+        }
+      }
+    },
+    {
+      "order_id": 116,
+      "risk_score": 0.362,
+      "value_at_risk": 19.92,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 7.21,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.88
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 7.21
+        }
+      }
+    },
+    {
+      "order_id": 117,
+      "risk_score": 0.334,
+      "value_at_risk": 81.68,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 27.28,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 10.91
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 27.28
+        }
+      }
+    },
+    {
+      "order_id": 118,
+      "risk_score": 0.3447,
+      "value_at_risk": 14.79,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 5.1,
+      "expected_loss_after": 5.1,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.04
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 5.1
+        }
+      }
+    },
+    {
+      "order_id": 119,
+      "risk_score": 0.0875,
+      "value_at_risk": 80.03,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 7.01,
+      "expected_loss_after": 7.01,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.8
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 7.01
+        }
+      }
+    },
+    {
+      "order_id": 120,
+      "risk_score": 0.9597,
+      "value_at_risk": 21.71,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 20.83,
+      "expected_loss_after": 8.33,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 8.33
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 20.83
+        }
+      }
+    },
+    {
+      "order_id": 121,
+      "risk_score": 0.9416,
+      "value_at_risk": 67.47,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 63.53,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 25.41
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 63.53
+        }
+      }
+    },
+    {
+      "order_id": 122,
+      "risk_score": 0.8312,
+      "value_at_risk": 6.93,
+      "decision": "upgrade",
+      "cost": 2.0,
+      "expected_loss_before": 5.76,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 2.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.3
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 5.76
+        }
+      }
+    },
+    {
+      "order_id": 123,
+      "risk_score": 0.7171,
+      "value_at_risk": 21.92,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 15.72,
+      "expected_loss_after": 6.29,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.29
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 15.72
+        }
+      }
+    },
+    {
+      "order_id": 124,
+      "risk_score": 0.7687,
+      "value_at_risk": 87.28,
+      "decision": "upgrade",
+      "cost": 3.2,
+      "expected_loss_before": 67.09,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 26.84
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 67.09
+        }
+      }
+    },
+    {
+      "order_id": 125,
+      "risk_score": 0.0875,
+      "value_at_risk": 49.0,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 4.29,
+      "expected_loss_after": 4.29,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 1.72
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 4.29
+        }
+      }
+    },
+    {
+      "order_id": 126,
+      "risk_score": 0.0875,
+      "value_at_risk": 52.76,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 4.62,
+      "expected_loss_after": 4.62,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 1.85
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 4.62
+        }
+      }
+    },
+    {
+      "order_id": 127,
+      "risk_score": 0.7171,
+      "value_at_risk": 32.78,
+      "decision": "upgrade",
+      "cost": 3.18,
+      "expected_loss_before": 23.51,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.18,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 9.4
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 23.51
+        }
+      }
+    },
+    {
+      "order_id": 128,
+      "risk_score": 0.2161,
+      "value_at_risk": 31.69,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 6.85,
+      "expected_loss_after": 6.85,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.74
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 6.85
+        }
+      }
+    },
+    {
+      "order_id": 129,
+      "risk_score": 0.2161,
+      "value_at_risk": 63.7,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 13.77,
+      "expected_loss_after": 5.51,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 5.51
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 13.77
+        }
+      }
+    },
+    {
+      "order_id": 130,
+      "risk_score": 0.1859,
+      "value_at_risk": 51.47,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 9.57,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.83
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 9.57
+        }
+      }
+    },
+    {
+      "order_id": 131,
+      "risk_score": 0.7171,
+      "value_at_risk": 60.9,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 43.67,
+      "expected_loss_after": 17.47,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 17.47
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 43.67
+        }
+      }
+    },
+    {
+      "order_id": 132,
+      "risk_score": 0.7171,
+      "value_at_risk": 39.36,
+      "decision": "upgrade",
+      "cost": 2.0,
+      "expected_loss_before": 28.23,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 2.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 11.29
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 28.23
+        }
+      }
+    },
+    {
+      "order_id": 133,
+      "risk_score": 0.296,
+      "value_at_risk": 157.44,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 46.6,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 18.64
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 46.6
+        }
+      }
+    },
+    {
+      "order_id": 134,
+      "risk_score": 1.0,
+      "value_at_risk": 74.43,
+      "decision": "upgrade",
+      "cost": 3.2,
+      "expected_loss_before": 74.43,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 29.77
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 74.43
+        }
+      }
+    },
+    {
+      "order_id": 135,
+      "risk_score": 0.9416,
+      "value_at_risk": 20.43,
+      "decision": "upgrade",
+      "cost": 1.76,
+      "expected_loss_before": 19.24,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 1.76,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.69
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 19.24
+        }
+      }
+    },
+    {
+      "order_id": 136,
+      "risk_score": 0.5846,
+      "value_at_risk": 0.0,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 0.0,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.0
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 0.0
+        }
+      }
+    },
+    {
+      "order_id": 137,
+      "risk_score": 0.3658,
+      "value_at_risk": 44.61,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 16.32,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.53
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 16.32
+        }
+      }
+    },
+    {
+      "order_id": 138,
+      "risk_score": 0.7171,
+      "value_at_risk": 2.39,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.71,
+      "expected_loss_after": 1.71,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.69
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.71
+        }
+      }
+    },
+    {
+      "order_id": 139,
+      "risk_score": 0.2336,
+      "value_at_risk": 101.39,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 23.69,
+      "expected_loss_after": 9.48,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 9.48
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 23.69
+        }
+      }
+    },
+    {
+      "order_id": 140,
+      "risk_score": 0.9416,
+      "value_at_risk": 19.86,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 18.7,
+      "expected_loss_after": 7.48,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.48
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 18.7
+        }
+      }
+    },
+    {
+      "order_id": 141,
+      "risk_score": 0.7687,
+      "value_at_risk": 44.93,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 34.54,
+      "expected_loss_after": 13.82,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 13.82
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 34.54
+        }
+      }
+    },
+    {
+      "order_id": 142,
+      "risk_score": 0.7687,
+      "value_at_risk": 105.59,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 81.17,
+      "expected_loss_after": 32.47,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 32.47
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 81.17
+        }
+      }
+    },
+    {
+      "order_id": 143,
+      "risk_score": 0.6556,
+      "value_at_risk": 862.88,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 565.68,
+      "expected_loss_after": 226.27,
+      "options": {
+        "upgrade": {
+          "cost": 120.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 226.27
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 565.68
+        }
+      }
+    },
+    {
+      "order_id": 144,
+      "risk_score": 0.5846,
+      "value_at_risk": 1.96,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.15,
+      "expected_loss_after": 1.15,
+      "options": {
+        "upgrade": {
+          "cost": 3.18,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.46
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.15
+        }
+      }
+    },
+    {
+      "order_id": 145,
+      "risk_score": 0.0875,
+      "value_at_risk": 13.72,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.2,
+      "expected_loss_after": 1.2,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.48
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.2
+        }
+      }
+    },
+    {
+      "order_id": 146,
+      "risk_score": 0.2161,
+      "value_at_risk": 46.98,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 10.15,
+      "expected_loss_after": 4.06,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 4.06
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 10.15
+        }
+      }
+    },
+    {
+      "order_id": 147,
+      "risk_score": 0.9597,
+      "value_at_risk": 20.0,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 19.19,
+      "expected_loss_after": 7.68,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.68
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 19.19
+        }
+      }
+    },
+    {
+      "order_id": 148,
+      "risk_score": 0.6825,
+      "value_at_risk": 44.36,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 30.27,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 12.11
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 30.27
+        }
+      }
+    },
+    {
+      "order_id": 149,
+      "risk_score": 0.7687,
+      "value_at_risk": 27.99,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 21.52,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 8.61
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 21.52
+        }
+      }
+    },
+    {
+      "order_id": 150,
+      "risk_score": 0.9597,
+      "value_at_risk": 27.8,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 26.68,
+      "expected_loss_after": 10.67,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 10.67
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 26.68
+        }
+      }
+    },
+    {
+      "order_id": 151,
+      "risk_score": 0.3658,
+      "value_at_risk": 50.63,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 18.52,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.41
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 18.52
+        }
+      }
+    },
+    {
+      "order_id": 152,
+      "risk_score": 0.1612,
+      "value_at_risk": 35.33,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 5.7,
+      "expected_loss_after": 5.7,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.28
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 5.7
+        }
+      }
+    },
+    {
+      "order_id": 153,
+      "risk_score": 0.4607,
+      "value_at_risk": 14.7,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 6.77,
+      "expected_loss_after": 6.77,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.71
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 6.77
+        }
+      }
+    },
+    {
+      "order_id": 154,
+      "risk_score": 0.4275,
+      "value_at_risk": 43.68,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 18.67,
+      "expected_loss_after": 7.47,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 7.47
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 18.67
+        }
+      }
+    },
+    {
+      "order_id": 155,
+      "risk_score": 0.1859,
+      "value_at_risk": 0.31,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 0.06,
+      "expected_loss_after": 0.06,
+      "options": {
+        "upgrade": {
+          "cost": 0.9,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.02
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 0.06
+        }
+      }
+    },
+    {
+      "order_id": 156,
+      "risk_score": 0.8786,
+      "value_at_risk": 17.47,
+      "decision": "upgrade",
+      "cost": 3.2,
+      "expected_loss_before": 15.35,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.14
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 15.35
+        }
+      }
+    },
+    {
+      "order_id": 157,
+      "risk_score": 0.5475,
+      "value_at_risk": 229.99,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 125.92,
+      "expected_loss_after": 50.37,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 50.37
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 125.92
+        }
+      }
+    },
+    {
+      "order_id": 158,
+      "risk_score": 0.6825,
+      "value_at_risk": 30.0,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 20.47,
+      "expected_loss_after": 8.19,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 8.19
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 20.47
+        }
+      }
+    },
+    {
+      "order_id": 159,
+      "risk_score": 0.5475,
+      "value_at_risk": 12.49,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 6.84,
+      "expected_loss_after": 6.84,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.74
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 6.84
+        }
+      }
+    },
+    {
+      "order_id": 160,
+      "risk_score": 1.0,
+      "value_at_risk": 136.11,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 136.11,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 54.44
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 136.11
+        }
+      }
+    },
+    {
+      "order_id": 161,
+      "risk_score": 1.0,
+      "value_at_risk": 82.89,
+      "decision": "upgrade",
+      "cost": 4.8,
+      "expected_loss_before": 82.89,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 33.16
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 82.89
+        }
+      }
+    },
+    {
+      "order_id": 162,
+      "risk_score": 0.6825,
+      "value_at_risk": 51.59,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 35.21,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 14.08
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 35.21
+        }
+      }
+    },
+    {
+      "order_id": 163,
+      "risk_score": 0.296,
+      "value_at_risk": 2.94,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 0.87,
+      "expected_loss_after": 0.87,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.35
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 0.87
+        }
+      }
+    },
+    {
+      "order_id": 164,
+      "risk_score": 0.7687,
+      "value_at_risk": 61.43,
+      "decision": "upgrade",
+      "cost": 5.2,
+      "expected_loss_before": 47.22,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 5.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 18.89
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 47.22
+        }
+      }
+    },
+    {
+      "order_id": 165,
+      "risk_score": 0.4607,
+      "value_at_risk": 37.34,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 17.2,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.88
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 17.2
+        }
+      }
+    },
+    {
+      "order_id": 166,
+      "risk_score": 0.5475,
+      "value_at_risk": 7.5,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 4.11,
+      "expected_loss_after": 4.11,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 1.64
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 4.11
+        }
+      }
+    },
+    {
+      "order_id": 167,
+      "risk_score": 0.4607,
+      "value_at_risk": 0.9,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 0.41,
+      "expected_loss_after": 0.41,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.17
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 0.41
+        }
+      }
+    },
+    {
+      "order_id": 168,
+      "risk_score": 0.6825,
+      "value_at_risk": 49.14,
+      "decision": "upgrade",
+      "cost": 10.4,
+      "expected_loss_before": 33.54,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 13.41
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 33.54
+        }
+      }
+    },
+    {
+      "order_id": 169,
+      "risk_score": 0.8786,
+      "value_at_risk": 47.02,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 41.31,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 16.52
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 41.31
+        }
+      }
+    },
+    {
+      "order_id": 170,
+      "risk_score": 0.0532,
+      "value_at_risk": 24.02,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.28,
+      "expected_loss_after": 1.28,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.51
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.28
+        }
+      }
+    },
+    {
+      "order_id": 171,
+      "risk_score": 0.2464,
+      "value_at_risk": 51.3,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 12.64,
+      "expected_loss_after": 5.06,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 5.06
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 12.64
+        }
+      }
+    },
+    {
+      "order_id": 172,
+      "risk_score": 0.7171,
+      "value_at_risk": 14.52,
+      "decision": "upgrade",
+      "cost": 3.2,
+      "expected_loss_before": 10.41,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 4.17
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 10.41
+        }
+      }
+    },
+    {
+      "order_id": 173,
+      "risk_score": 0.7687,
+      "value_at_risk": 4.9,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 3.77,
+      "expected_loss_after": 3.77,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 1.51
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 3.77
+        }
+      }
+    },
+    {
+      "order_id": 174,
+      "risk_score": 0.9416,
+      "value_at_risk": 18.56,
+      "decision": "upgrade",
+      "cost": 2.0,
+      "expected_loss_before": 17.48,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 2.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.99
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 17.48
+        }
+      }
+    },
+    {
+      "order_id": 175,
+      "risk_score": 0.1267,
+      "value_at_risk": 9.6,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.22,
+      "expected_loss_after": 1.22,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.49
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.22
+        }
+      }
+    },
+    {
+      "order_id": 176,
+      "risk_score": 0.5475,
+      "value_at_risk": 14.85,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 8.13,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.25
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 8.13
+        }
+      }
+    },
+    {
+      "order_id": 177,
+      "risk_score": 0.5846,
+      "value_at_risk": 27.54,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 16.1,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 6.44
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 16.1
+        }
+      }
+    },
+    {
+      "order_id": 178,
+      "risk_score": 0.6825,
+      "value_at_risk": 0.0,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 0.0,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.8,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.0
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 0.0
+        }
+      }
+    },
+    {
+      "order_id": 179,
+      "risk_score": 1.0,
+      "value_at_risk": 9.1,
+      "decision": "upgrade",
+      "cost": 1.6,
+      "expected_loss_before": 9.1,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 1.6,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.64
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 9.1
+        }
+      }
+    },
+    {
+      "order_id": 180,
+      "risk_score": 0.1612,
+      "value_at_risk": 38.61,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 6.22,
+      "expected_loss_after": 6.22,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 2.49
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 6.22
+        }
+      }
+    },
+    {
+      "order_id": 181,
+      "risk_score": 0.6556,
+      "value_at_risk": 97.44,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 63.88,
+      "expected_loss_after": 25.55,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 25.55
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 63.88
+        }
+      }
+    },
+    {
+      "order_id": 182,
+      "risk_score": 0.296,
+      "value_at_risk": 40.8,
+      "decision": "upgrade",
+      "cost": 4.0,
+      "expected_loss_before": 12.08,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 4.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 4.83
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 12.08
+        }
+      }
+    },
+    {
+      "order_id": 183,
+      "risk_score": 0.0532,
+      "value_at_risk": 24.6,
+      "decision": "nothing",
+      "cost": 0.0,
+      "expected_loss_before": 1.31,
+      "expected_loss_after": 1.31,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 0.52
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 1.31
+        }
+      }
+    },
+    {
+      "order_id": 184,
+      "risk_score": 0.1267,
+      "value_at_risk": 71.09,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 9.01,
+      "expected_loss_after": 3.6,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.6
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 9.01
+        }
+      }
+    },
+    {
+      "order_id": 185,
+      "risk_score": 0.7687,
+      "value_at_risk": 139.67,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 107.36,
+      "expected_loss_after": 42.95,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 42.95
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 107.36
+        }
+      }
+    },
+    {
+      "order_id": 186,
+      "risk_score": 1.0,
+      "value_at_risk": 9.45,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 9.45,
+      "expected_loss_after": 3.78,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.78
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 9.45
+        }
+      }
+    },
+    {
+      "order_id": 187,
+      "risk_score": 0.1859,
+      "value_at_risk": 131.99,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 24.54,
+      "expected_loss_after": 9.82,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 9.82
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 24.54
+        }
+      }
+    },
+    {
+      "order_id": 188,
+      "risk_score": 0.5475,
+      "value_at_risk": 111.37,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 60.97,
+      "expected_loss_after": 24.39,
+      "options": {
+        "upgrade": {
+          "cost": 24.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 24.39
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 60.97
+        }
+      }
+    },
+    {
+      "order_id": 189,
+      "risk_score": 1.0,
+      "value_at_risk": 55.44,
+      "decision": "upgrade",
+      "cost": 16.0,
+      "expected_loss_before": 55.44,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 22.18
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 55.44
+        }
+      }
+    },
+    {
+      "order_id": 190,
+      "risk_score": 0.1859,
+      "value_at_risk": 61.34,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 11.4,
+      "expected_loss_after": 4.56,
+      "options": {
+        "upgrade": {
+          "cost": 16.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 4.56
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 11.4
+        }
+      }
+    },
+    {
+      "order_id": 191,
+      "risk_score": 0.9416,
+      "value_at_risk": 190.88,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 179.73,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 71.89
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 179.73
+        }
+      }
+    },
+    {
+      "order_id": 192,
+      "risk_score": 0.5359,
+      "value_at_risk": 15.79,
+      "decision": "upgrade",
+      "cost": 3.2,
+      "expected_loss_before": 8.46,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 3.2,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.38
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 8.46
+        }
+      }
+    },
+    {
+      "order_id": 193,
+      "risk_score": 0.6556,
+      "value_at_risk": 48.36,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 31.7,
+      "expected_loss_after": 12.68,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 12.68
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 31.7
+        }
+      }
+    },
+    {
+      "order_id": 194,
+      "risk_score": 1.0,
+      "value_at_risk": 40.74,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 40.74,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 16.3
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 40.74
+        }
+      }
+    },
+    {
+      "order_id": 195,
+      "risk_score": 0.5846,
+      "value_at_risk": 35.83,
+      "decision": "upgrade",
+      "cost": 7.6,
+      "expected_loss_before": 20.95,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 7.6,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 8.38
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 20.95
+        }
+      }
+    },
+    {
+      "order_id": 196,
+      "risk_score": 0.2161,
+      "value_at_risk": 53.5,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 11.56,
+      "expected_loss_after": 4.62,
+      "options": {
+        "upgrade": {
+          "cost": 10.4,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 4.62
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 11.56
+        }
+      }
+    },
+    {
+      "order_id": 197,
+      "risk_score": 0.7687,
+      "value_at_risk": 11.46,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 8.81,
+      "expected_loss_after": 3.52,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 3.52
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 8.81
+        }
+      }
+    },
+    {
+      "order_id": 198,
+      "risk_score": 0.9416,
+      "value_at_risk": 112.19,
+      "decision": "discount",
+      "cost": 3.0,
+      "expected_loss_before": 105.64,
+      "expected_loss_after": 42.26,
+      "options": {
+        "upgrade": {
+          "cost": 32.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 42.26
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 105.64
+        }
+      }
+    },
+    {
+      "order_id": 199,
+      "risk_score": 0.4275,
+      "value_at_risk": 86.39,
+      "decision": "upgrade",
+      "cost": 8.0,
+      "expected_loss_before": 36.93,
+      "expected_loss_after": 0.0,
+      "options": {
+        "upgrade": {
+          "cost": 8.0,
+          "expected_loss_after": 0.0
+        },
+        "discount": {
+          "cost": 3.0,
+          "expected_loss_after": 14.77
+        },
+        "nothing": {
+          "cost": 0.0,
+          "expected_loss_after": 36.93
+        }
+      }
+    }
+  ]
+}
