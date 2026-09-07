@@ -1,0 +1,10 @@
+﻿data/*.csv
+*.pkl
+__pycache__/
+*.pyc
+.env
+venv/
+.ipynb_checkpoints/
+
+dashboard/public/prescriptions.json
+*.db
