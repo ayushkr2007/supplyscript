@@ -1,0 +1,31 @@
+{
+  "n_orders": 200,
+  "before": {
+    "n_acted_on": 159,
+    "precision": 0.7421,
+    "recall": 0.8939,
+    "total_spend": 799.83,
+    "wasted_spend": 164.4,
+    "wasted_spend_pct": 20.6,
+    "missed_value": 112.55,
+    "brier_score": 0.1543,
+    "ece": 0.096
+  },
+  "after": {
+    "n_acted_on": 152,
+    "precision": 0.7895,
+    "recall": 0.9091,
+    "total_spend": 800.03,
+    "wasted_spend": 140.0,
+    "wasted_spend_pct": 17.5,
+    "missed_value": 115.4,
+    "brier_score": 0.1493,
+    "ece": 0.0874
+  },
+  "deltas_pct": {
+    "brier_score": -3.2,
+    "ece": -9.0,
+    "wasted_spend": -14.8,
+    "missed_value": 2.5
+  }
+}
