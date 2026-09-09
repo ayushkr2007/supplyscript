@@ -1,6 +1,6 @@
 ﻿import { useEffect, useState, useMemo, useCallback } from 'react'
 import SummaryBar from './components/SummaryBar.jsx'
-import OrderCard from './components/OrderCard.jsx'
+import OrderTable from './components/OrderTable.jsx'
 import ExecutedPanel from './components/ExecutedPanel.jsx'
 import RoiPanel from './components/RoiPanel.jsx'
 import { fetchDecisions, postDecision } from './api.js'
@@ -134,17 +134,12 @@ export default function App() {
         ))}
       </nav>
 
-      <main className="order-grid">
-        {orders.map((order) => (
-          <OrderCard
-            key={order.order_id}
-            order={order}
-            executionStatus={executionStatus[order.order_id]}
-            executionError={executionError[order.order_id]}
-            onExecute={handleExecute}
-          />
-        ))}
-      </main>
+      <OrderTable
+        orders={orders}
+        executionStatus={executionStatus}
+        executionError={executionError}
+        onExecute={handleExecute}
+      />
     </div>
   )
 }
