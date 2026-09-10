@@ -128,6 +128,14 @@ running spent total), offline detection (dashboard detects when the
 backend is unreachable and shows a clear recovery message instead of
 failing silently), and per-order error messages when execution fails.
 
+<<<<<<< HEAD
+### Week 3 - The Closed Loop (upcoming)
+- Compare predicted cost/outcome vs. actual for executed decisions
+  (using the `actual_outcome` / `actual_cost` fields already present
+  in the decisions table)
+- Build a "Decision ROI" feedback view tracking how often prescribed
+  actions actually paid off
+=======
 ### Week 3 - The Closed Loop
 
 **Day 1 - Predicted vs. Actual Evaluation**
@@ -155,3 +163,4 @@ alongside a live breakdown of decisions actually executed through
 the dashboard and checked against real outcomes via Day 1's
 `actual_outcome` data, with a per-decision-type paid-off rate and
 running wasted-spend total.
+>>>>>>> 5ddb4539a26d9c38b2698aec25820bd8b87b0fac

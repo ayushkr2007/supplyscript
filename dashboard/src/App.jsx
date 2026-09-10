@@ -1,8 +1,13 @@
 ﻿import { useEffect, useState, useMemo, useCallback } from 'react'
 import SummaryBar from './components/SummaryBar.jsx'
+<<<<<<< HEAD
+import OrderCard from './components/OrderCard.jsx'
+import ExecutedPanel from './components/ExecutedPanel.jsx'
+=======
 import OrderTable from './components/OrderTable.jsx'
 import ExecutedPanel from './components/ExecutedPanel.jsx'
 import RoiPanel from './components/RoiPanel.jsx'
+>>>>>>> 5ddb4539a26d9c38b2698aec25820bd8b87b0fac
 import { fetchDecisions, postDecision } from './api.js'
 import './App.css'
 
@@ -118,8 +123,11 @@ export default function App() {
 
       <ExecutedPanel decisions={executedDecisions} apiOnline={apiOnline} />
 
+<<<<<<< HEAD
+=======
       {apiOnline && <RoiPanel decisions={executedDecisions} />}
 
+>>>>>>> 5ddb4539a26d9c38b2698aec25820bd8b87b0fac
       <nav className="filter-row" aria-label="Filter by decision">
         <FilterPill label="All orders" active={filter === 'all'} onClick={() => setFilter('all')} count={data.summary.batch_size} />
         {Object.entries(data.summary.decision_counts).map(([key, count]) => (
@@ -134,12 +142,26 @@ export default function App() {
         ))}
       </nav>
 
+<<<<<<< HEAD
+      <main className="order-grid">
+        {orders.map((order) => (
+          <OrderCard
+            key={order.order_id}
+            order={order}
+            executionStatus={executionStatus[order.order_id]}
+            executionError={executionError[order.order_id]}
+            onExecute={handleExecute}
+          />
+        ))}
+      </main>
+=======
       <OrderTable
         orders={orders}
         executionStatus={executionStatus}
         executionError={executionError}
         onExecute={handleExecute}
       />
+>>>>>>> 5ddb4539a26d9c38b2698aec25820bd8b87b0fac
     </div>
   )
 }
