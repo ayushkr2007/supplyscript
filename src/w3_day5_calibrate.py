@@ -19,7 +19,7 @@ y_test set, not just the same 200-order sample Day 2/Day 4 evaluated on.
 Fitting and evaluating calibration on the identical small sample would
 overstate the fix -- the correction needs to generalize.
 
-This reuses the exact pipeline from w2_day3_json_output_fixed.py
+This reuses the exact pipeline from w2_day3_json_output.py
 (same schema, same budget/optimizer logic) so the output is a drop-in
 comparison to the original prescriptions.json -- but with the
 calibrated risk_score fed into the SAME PuLP optimizer, so orders can
@@ -36,7 +36,7 @@ import joblib
 import pandas as pd
 from sklearn.isotonic import IsotonicRegression
 
-import w2_day3_json_output_fixed as w2  # same directory -- reuses the real pipeline
+import w2_day3_json_output as w2  # same directory -- reuses the real pipeline
 
 DATA_DIR = "data"
 MODEL_PATH = "models/xgb_tuned.pkl"
@@ -143,7 +143,7 @@ def main():
               f"after calibration -- these are the orders the original miscalibration was misjudging.")
     else:
         print(f"\n(Couldn't find {DATA_DIR}/prescriptions.json to diff against -- "
-              "run w2_day3_json_output_fixed.py first if you want the before/after comparison.)")
+              "run w2_day3_json_output.py first if you want the before/after comparison.)")
 
 
 if __name__ == "__main__":

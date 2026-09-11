@@ -1,4 +1,4 @@
-﻿"""
+"""
 SupplyPrescript - Week 2, Day 3: JSON Output Layer
 --------------------------------------------------------------------------
 Wraps Day 2's multi-option optimizer into a single reusable function
@@ -6,12 +6,29 @@ Wraps Day 2's multi-option optimizer into a single reusable function
 per order -- ready for the React dashboard (or a future FastAPI
 endpoint in Week 3) to consume directly.
 
+Each prescribed order looks like:
+{
+  "order_id": 42,
+  "risk_score": 0.9999,
+  "value_at_risk": 88.19,
+  "decision": "upgrade",
+  "cost": 4.80,
+  "expected_loss_before": 88.18,
+  "expected_loss_after": 0.0,
+  "options": {
+    "upgrade":  {"cost": 4.80, "expected_loss_after": 0.0},
+    "discount": {"cost": 3.00, "expected_loss_after": 35.27},
+    "nothing":  {"cost": 0.0,  "expected_loss_after": 88.18}
+  }
+}
+
 NOTE (mid-review fix): total_cost in the summary is computed from the
 *unrounded* per-order costs, not by summing the already-rounded
 per-order display values. Summing rounded numbers can drift a few
-cents above budget purely from rounding, even though the LP itself
-always respects the budget constraint on the true unrounded costs.
-This was caught by the mid-review budget audit.
+cents above budget purely from rounding (200 orders x up to $0.005
+each = up to ~$1 drift) even though the LP itself always respects the
+budget constraint on the true unrounded costs. This was caught by the
+mid-review budget audit.
 """
 
 import json
@@ -102,6 +119,8 @@ def solve_multi_option(df: pd.DataFrame, budget: float = BUDGET) -> pd.DataFrame
 
 
 def to_json_records(df: pd.DataFrame) -> list:
+    """Convert the solved dataframe into the clean per-order JSON
+    structure the dashboard will consume."""
     records = []
     for i, row in df.iterrows():
         base_loss = row["base_expected_loss"]
@@ -120,6 +139,7 @@ def to_json_records(df: pd.DataFrame) -> list:
             },
         }
         chosen = row["decision"]
+        # raw (unrounded) cost -- used for the true budget check
         raw_cost = (
             row["upgrade_cost"] if chosen == "upgrade"
             else row["discount_cost"] if chosen == "discount"
@@ -131,7 +151,7 @@ def to_json_records(df: pd.DataFrame) -> list:
             "value_at_risk": round(float(row["value_at_risk"]), 2),
             "decision": chosen,
             "cost": options[chosen]["cost"],
-            "_raw_cost": float(raw_cost),
+            "_raw_cost": float(raw_cost),  # internal use only, for accurate summary totals
             "expected_loss_before": round(float(base_loss), 2),
             "expected_loss_after": options[chosen]["expected_loss_after"],
             "options": options,
@@ -140,6 +160,9 @@ def to_json_records(df: pd.DataFrame) -> list:
 
 
 def prescribe_batch(n_orders: int = 200, budget: float = BUDGET, seed: int = 1) -> dict:
+    """Main entry point: run the full pipeline and return a JSON-ready
+    dict with summary stats + per-order prescriptions. This is the
+    function the dashboard / a future FastAPI endpoint will call."""
     model = load_model()
     batch = load_batch(n_orders=n_orders, seed=seed)
     scored = score_batch(model, batch)
@@ -148,10 +171,14 @@ def prescribe_batch(n_orders: int = 200, budget: float = BUDGET, seed: int = 1) 
 
     records = to_json_records(result)
 
+    # Use raw unrounded costs for the true total -- avoids rounding
+    # drift from summing 200 independently-rounded per-order values
+    # (see mid-review audit note in the module docstring).
     total_cost = sum(r["_raw_cost"] for r in records)
     loss_before = sum(r["expected_loss_before"] for r in records)
     loss_after = sum(r["expected_loss_after"] for r in records)
 
+    # Strip internal field before returning to caller / serializing
     for r in records:
         del r["_raw_cost"]
 
