@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+pydantic
+pandas
+scikit-learn
+xgboost
+pulp
+joblib
+snowflake-connector-python
+python-dotenv

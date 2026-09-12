@@ -1,11 +1,20 @@
 """
-SupplyPrescript - Mid-Review: Write-Back Architecture
+SupplyPrescript - Week 4, Day 2: Snowflake Write-Back
 --------------------------------------------------------------------------
-FastAPI backend that lets the dashboard "Execute Decision" button
-persist a chosen prescription back into an operational database
-(SQLite locally -- a lightweight stand-in for the Snowflake write-back
-described in the project stack; same pattern, easier to run for
-local development and grading).
+Replaces the local SQLite write-back (used from Mid-Review through Week 3
+for easy local development) with the Snowflake write-back the original
+project stack specified. SQLite worked fine on one machine, but a
+deployed backend (Week 4 Day 3+) has no persistent local disk -- the
+decisions table needs to live somewhere that survives a redeploy and is
+reachable from wherever the backend actually runs.
+
+Endpoints are unchanged from the Mid-Review API -- same request/response
+shapes, same dashboard contract. Only the storage layer changed.
+
+Credentials are read from environment variables (see .env.example),
+never committed. Locally, put a real .env file (already gitignored) in
+the repo root; in production, set the same variables in your hosting
+platform's environment settings.
 
 Endpoints:
   POST /decisions       -- insert an executed decision
@@ -20,54 +29,83 @@ Run with:
 """
 
 import json
-import sqlite3
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
+import snowflake.connector
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
-DB_PATH = "data/supplyprescript.db"
+load_dotenv()
+
+# Lets us keep the same "?" placeholder style the SQLite version used,
+# instead of Snowflake's default %(name)s pyformat placeholders.
+snowflake.connector.paramstyle = "qmark"
+
 PRESCRIPTIONS_PATH = "data/prescriptions.json"
+
+SNOWFLAKE_CONFIG = {
+    "account": os.environ["SNOWFLAKE_ACCOUNT"],
+    "user": os.environ["SNOWFLAKE_USER"],
+    "password": os.environ["SNOWFLAKE_PASSWORD"],
+    "warehouse": os.environ.get("SNOWFLAKE_WAREHOUSE", "COMPUTE_WH"),
+    "database": os.environ.get("SNOWFLAKE_DATABASE", "SUPPLYPRESCRIPT"),
+    "schema": os.environ.get("SNOWFLAKE_SCHEMA", "PUBLIC"),
+}
+
+# CORS origins the deployed dashboard will actually call from -- Day 4
+# adds the real Vercel URL here once it exists.
+ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+if extra_origin := os.environ.get("DASHBOARD_ORIGIN"):
+    ALLOWED_ORIGINS.append(extra_origin)
 
 app = FastAPI(title="SupplyPrescript Write-Back API")
 
-# Allow the local Vite dev server (dashboard) to call this API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 
 def get_db():
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    return conn
+    return snowflake.connector.connect(**SNOWFLAKE_CONFIG)
+
+
+def row_to_dict(row: dict) -> dict:
+    """Snowflake returns unquoted column names in upper case; the
+    Pydantic models below use lower_snake_case field names to match
+    the original SQLite API contract exactly, so normalize here."""
+    return {k.lower(): v for k, v in row.items()}
 
 
 def init_db():
-    Path("data").mkdir(exist_ok=True)
     conn = get_db()
-    conn.execute("""
-        CREATE TABLE IF NOT EXISTS decisions (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            order_id INTEGER NOT NULL,
-            decision TEXT NOT NULL,
-            cost REAL NOT NULL,
-            expected_loss_before REAL NOT NULL,
-            expected_loss_after REAL NOT NULL,
-            risk_score REAL NOT NULL,
-            executed_at TEXT NOT NULL,
-            actual_outcome TEXT,
-            actual_cost REAL
-        )
-    """)
-    conn.commit()
-    conn.close()
+    try:
+        conn.cursor().execute("""
+            CREATE TABLE IF NOT EXISTS decisions (
+                id INTEGER AUTOINCREMENT PRIMARY KEY,
+                order_id INTEGER NOT NULL,
+                decision STRING NOT NULL,
+                cost FLOAT NOT NULL,
+                expected_loss_before FLOAT NOT NULL,
+                expected_loss_after FLOAT NOT NULL,
+                risk_score FLOAT NOT NULL,
+                executed_at STRING NOT NULL,
+                actual_outcome STRING,
+                actual_cost FLOAT
+            )
+        """)
+    finally:
+        conn.close()
 
 
 class DecisionIn(BaseModel):
@@ -97,39 +135,58 @@ def create_decision(decision: DecisionIn):
         raise HTTPException(status_code=400, detail="Invalid decision type")
 
     conn = get_db()
-    executed_at = datetime.now(timezone.utc).isoformat()
-    cur = conn.execute(
-        """INSERT INTO decisions
-           (order_id, decision, cost, expected_loss_before,
-            expected_loss_after, risk_score, executed_at)
-           VALUES (?, ?, ?, ?, ?, ?, ?)""",
-        (decision.order_id, decision.decision, decision.cost,
-         decision.expected_loss_before, decision.expected_loss_after,
-         decision.risk_score, executed_at),
-    )
-    conn.commit()
-    new_id = cur.lastrowid
-    row = conn.execute("SELECT * FROM decisions WHERE id = ?", (new_id,)).fetchone()
-    conn.close()
-    return dict(row)
+    try:
+        cur = conn.cursor(snowflake.connector.DictCursor)
+        # executed_at carries microsecond precision, so pairing it with
+        # order_id is unique enough to look the new row back up --
+        # Snowflake's connector doesn't expose a SQLite-style lastrowid.
+        executed_at = datetime.now(timezone.utc).isoformat()
+        cur.execute(
+            """INSERT INTO decisions
+               (order_id, decision, cost, expected_loss_before,
+                expected_loss_after, risk_score, executed_at)
+               VALUES (?, ?, ?, ?, ?, ?, ?)""",
+            (decision.order_id, decision.decision, decision.cost,
+             decision.expected_loss_before, decision.expected_loss_after,
+             decision.risk_score, executed_at),
+        )
+        cur.execute(
+            "SELECT * FROM decisions WHERE order_id = ? AND executed_at = ?",
+            (decision.order_id, executed_at),
+        )
+        row = cur.fetchone()
+    finally:
+        conn.close()
+
+    if row is None:
+        raise HTTPException(status_code=500, detail="Insert succeeded but could not read the row back")
+    return row_to_dict(row)
 
 
 @app.get("/decisions", response_model=list[DecisionOut])
 def list_decisions():
     conn = get_db()
-    rows = conn.execute("SELECT * FROM decisions ORDER BY executed_at DESC").fetchall()
-    conn.close()
-    return [dict(r) for r in rows]
+    try:
+        cur = conn.cursor(snowflake.connector.DictCursor)
+        cur.execute("SELECT * FROM decisions ORDER BY executed_at DESC")
+        rows = cur.fetchall()
+    finally:
+        conn.close()
+    return [row_to_dict(r) for r in rows]
 
 
 @app.get("/decisions/{decision_id}", response_model=DecisionOut)
 def get_decision(decision_id: int):
     conn = get_db()
-    row = conn.execute("SELECT * FROM decisions WHERE id = ?", (decision_id,)).fetchone()
-    conn.close()
+    try:
+        cur = conn.cursor(snowflake.connector.DictCursor)
+        cur.execute("SELECT * FROM decisions WHERE id = ?", (decision_id,))
+        row = cur.fetchone()
+    finally:
+        conn.close()
     if row is None:
         raise HTTPException(status_code=404, detail="Decision not found")
-    return dict(row)
+    return row_to_dict(row)
 
 
 @app.get("/prescriptions")
@@ -146,4 +203,4 @@ def get_prescriptions():
 
 @app.get("/")
 def root():
-    return {"status": "SupplyPrescript API running", "docs": "/docs"}
+    return {"status": "SupplyPrescript API running (Snowflake write-back)", "docs": "/docs"}
