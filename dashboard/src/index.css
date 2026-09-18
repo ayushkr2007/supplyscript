@@ -31,7 +31,10 @@ html, body {
   color: var(--text);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+<<<<<<< HEAD
+=======
   font-variant-numeric: tabular-nums;
+>>>>>>> 5ddb4539a26d9c38b2698aec25820bd8b87b0fac
 }
 
 #root {
