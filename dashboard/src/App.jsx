@@ -3,7 +3,7 @@ import SummaryBar from './components/SummaryBar.jsx'
 import OrderTable from './components/OrderTable.jsx'
 import ExecutedPanel from './components/ExecutedPanel.jsx'
 import RoiPanel from './components/RoiPanel.jsx'
-import { fetchDecisions, postDecision } from './api.js'
+import { API_BASE, fetchDecisions, postDecision } from './api.js'
 import './App.css'
 
 const DECISION_LABELS = {
@@ -22,9 +22,9 @@ export default function App() {
   const [apiOnline, setApiOnline] = useState(true)
 
   useEffect(() => {
-    fetch('/prescriptions.json')
+    fetch(`${API_BASE}/prescriptions`)
       .then((res) => {
-        if (!res.ok) throw new Error('prescriptions.json not found')
+        if (!res.ok) throw new Error('Could not load prescriptions')
         return res.json()
       })
       .then(setData)
@@ -71,7 +71,7 @@ export default function App() {
     } catch (err) {
       const isNetworkError = err instanceof TypeError
       const message = isNetworkError
-        ? 'Backend unreachable - is it running on port 8000?'
+        ? 'Backend unreachable - is it running?'
         : err.message
       setExecutionStatus((prev) => ({ ...prev, [order.order_id]: 'error' }))
       setExecutionError((prev) => ({ ...prev, [order.order_id]: message }))
@@ -85,9 +85,8 @@ export default function App() {
         <p className="state-eyebrow">Board offline</p>
         <h1>Couldn't load the manifest.</h1>
         <p className="state-body">
-          Run <code>python src/w2_day3_json_output.py</code> to generate{' '}
-          <code>data/prescriptions.json</code>, then copy it into{' '}
-          <code>public/prescriptions.json</code> here.
+          Couldn't reach <code>{API_BASE}/prescriptions</code>. Make sure the
+          backend is running and reachable.
         </p>
       </div>
     )
