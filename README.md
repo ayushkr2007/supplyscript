@@ -1,8 +1,17 @@
-﻿# SupplyPrescript - Closed-Loop Prescriptive Analytics
+# SupplyPrescript - Closed-Loop Prescriptive Analytics
 
 Predicts supply chain shipment delays and prescribes optimal mitigation
 actions (upgrade shipping, compensation voucher, or no action), then
 closes the loop by comparing predicted vs. actual outcomes.
+
+## Live Demo
+
+- **Dashboard:** https://supplyscript.vercel.app
+- **API:** https://supplyscript.onrender.com (interactive docs at `/docs`)
+
+> Note: the API runs on Render's free tier, which spins down after
+> inactivity. The first request after a period of inactivity may take
+> 30-60 seconds to wake up.
 
 ## Dataset
 [DataCo Smart Supply Chain for Big Data Analysis](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)
@@ -12,10 +21,27 @@ place `DataCoSupplyChainDataset.csv` in `data/` locally.
 ## Stack
 - **Predictive:** XGBoost
 - **Prescriptive:** PuLP (linear optimization)
-- **Write-back:** FastAPI + SQLite (local dev stand-in for a
-  production Snowflake write-back layer - same pattern, easier to
-  run locally)
-- **Dashboard:** React (Vite)
+- **Write-back:** FastAPI + Snowflake
+- **Dashboard:** React (Vite), deployed on Vercel
+- **API:** deployed on Render
+
+## Running Locally
+
+**Backend:**
+```
+pip install -r requirements.txt
+uvicorn src.api:app --reload --port 8000
+```
+Requires a `.env` file with Snowflake credentials - see `env.example`.
+
+**Dashboard:**
+```
+cd dashboard
+npm install
+npm run dev
+```
+Create `dashboard/.env` with `VITE_API_URL=http://localhost:8000` to
+point the dashboard at your local backend.
 
 ## Progress Log
 
@@ -155,3 +181,36 @@ alongside a live breakdown of decisions actually executed through
 the dashboard and checked against real outcomes via Day 1's
 `actual_outcome` data, with a per-decision-type paid-off rate and
 running wasted-spend total.
+
+### Week 4 - Production Deployment
+
+**Day 1 - Code Hygiene**
+Cleaned up the codebase ahead of deployment: removed dead code,
+consolidated environment variable handling, and tidied up the
+project structure.
+
+**Day 2 - Snowflake Migration**
+Migrated the write-back layer from SQLite to Snowflake, replacing the
+local-dev stand-in with the production datastore. `POST /decisions`
+and `GET /decisions` now read/write Snowflake directly.
+
+**Day 3 - Backend Deployment (Render)**
+Deployed the FastAPI backend to Render at
+https://supplyscript.onrender.com. Confirmed live:
+`GET /prescriptions` returns the full 200-order batch, `GET
+/decisions` returns execution history, and `POST /decisions`
+successfully writes a new row to Snowflake and reads it back -
+verifying the full write-back loop works in production, not just
+locally.
+
+**Day 4 - Dashboard Deployment (Vercel)**
+Updated the dashboard to fetch `/prescriptions` from the live backend
+instead of a static local JSON file, making `API_BASE` configurable
+via `VITE_API_URL` so the same code works against localhost in
+development and the Render backend in production. Deployed the
+dashboard to Vercel at https://supplyscript.vercel.app. Added the
+Vercel origin to the backend's CORS allowlist via the
+`DASHBOARD_ORIGIN` environment variable. Confirmed the full live loop
+end-to-end: the deployed dashboard loads real prescriptions from
+Snowflake via the deployed backend, and executing a decision through
+the UI writes to Snowflake and updates the "Recently Executed" panel.
