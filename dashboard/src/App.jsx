@@ -1,4 +1,5 @@
-﻿import { useEffect, useState, useMemo, useCallback } from 'react'
+import { useEffect, useState, useMemo, useCallback } from 'react'
+import Sidebar from './components/Sidebar.jsx'
 import SummaryBar from './components/SummaryBar.jsx'
 import OrderTable from './components/OrderTable.jsx'
 import ExecutedPanel from './components/ExecutedPanel.jsx'
@@ -102,43 +103,55 @@ export default function App() {
   }
 
   return (
-    <div className="app">
-      <header className="app-header">
-        <div>
-          <p className="eyebrow">SupplyPrescript &middot; Decision Board</p>
-          <h1>Today's shipment manifest</h1>
-          <p className="subhead">
-            {data.summary.batch_size} orders scored &middot; budget allocated across the batch to minimize expected loss
-          </p>
+    <div className="shell">
+      <Sidebar />
+
+      <main className="main">
+        <div className="app">
+          <header className="app-header" id="overview">
+            <div>
+              <p className="eyebrow">SupplyPrescript &middot; Decision Board</p>
+              <h1>Today's shipment manifest</h1>
+              <p className="subhead">
+                {data.summary.batch_size} orders scored &middot; budget allocated across the batch to minimize expected loss
+              </p>
+            </div>
+          </header>
+
+          <SummaryBar summary={data.summary} />
+
+          <section id="decisions">
+            <ExecutedPanel decisions={executedDecisions} apiOnline={apiOnline} />
+          </section>
+
+          <section id="analytics">
+            {apiOnline && <RoiPanel decisions={executedDecisions} />}
+          </section>
+
+          <div id="prescriptions">
+            <nav className="filter-row" aria-label="Filter by decision">
+              <FilterPill label="All orders" active={filter === 'all'} onClick={() => setFilter('all')} count={data.summary.batch_size} />
+              {Object.entries(data.summary.decision_counts).map(([key, count]) => (
+                <FilterPill
+                  key={key}
+                  label={DECISION_LABELS[key]}
+                  active={filter === key}
+                  onClick={() => setFilter(key)}
+                  count={count}
+                  tone={key}
+                />
+              ))}
+            </nav>
+
+            <OrderTable
+              orders={orders}
+              executionStatus={executionStatus}
+              executionError={executionError}
+              onExecute={handleExecute}
+            />
+          </div>
         </div>
-      </header>
-
-      <SummaryBar summary={data.summary} />
-
-      <ExecutedPanel decisions={executedDecisions} apiOnline={apiOnline} />
-
-      {apiOnline && <RoiPanel decisions={executedDecisions} />}
-
-      <nav className="filter-row" aria-label="Filter by decision">
-        <FilterPill label="All orders" active={filter === 'all'} onClick={() => setFilter('all')} count={data.summary.batch_size} />
-        {Object.entries(data.summary.decision_counts).map(([key, count]) => (
-          <FilterPill
-            key={key}
-            label={DECISION_LABELS[key]}
-            active={filter === key}
-            onClick={() => setFilter(key)}
-            count={count}
-            tone={key}
-          />
-        ))}
-      </nav>
-
-      <OrderTable
-        orders={orders}
-        executionStatus={executionStatus}
-        executionError={executionError}
-        onExecute={handleExecute}
-      />
+      </main>
     </div>
   )
 }
